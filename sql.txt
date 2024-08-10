@@ -1,6 +1,0 @@
-CREATE TABLE neos (
-    id INTEGER PRIMARY KEY,
-    name TEXT,
-    size INTEGER,
-    miss_distance INTEGER
-);
