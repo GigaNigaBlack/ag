@@ -3,37 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEO Tracker</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code&display=swap" rel="stylesheet">
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <title>Astro Guard</title>
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Top 50 Risky Near Earth Objects</h1>
-    </header>
-    <main>
-        <div id="neo-list">
+    <div class="galaxy"></div>
+
+    <div class="content">
+        <section class="intro">
+            <h1 id="astro-guard">Astro Guard</h1>
+            <p id="team-name">- By Team Pineapple</p>
+        </section>
+
+        <section class="description">
+            <p id="description-paragraph">The Risk List is a catalogue of all objects for which a non-zero impact probability has been computed. Each entry contains details on the particular Earth approach which poses the highest risk of impact (as expressed by the Palermo Scale). It includes its date, size, velocity and probability. Impact history data can be selected in tabular and graphical form. Links to the impactor table are also given. In most cases, the size presented in the table is estimated indirectly from the absolute magnitude, and flagged with an asterisk. In this case the size uncertainty could be large. When a better measurement is available in the literature, it replaces the estimated value. By default, entries are sorted by the maximum Palermo Scale value; the sorting can be changed by clicking on the table headers.</p>
+        </section>
+
+        <section class="table-section">
+            <h2>NEO Description Table</h2>
             <table>
                 <thead>
                     <tr>
                         <th>Name</th>
                         <th>Size (m)</th>
                         <th>Miss Distance (km)</th>
+                        <th>Details</th>
                     </tr>
                 </thead>
                 <tbody id="neo-table-body">
-                    <!-- Data will be populated here -->
+                    <tr>
+                        <td>C345FG</td>
+                        <td>300</td>
+                        <td>40,000</td>
+                        <td>
+                            <button class="details-button">More Info</button>
+                            <div class="details-dropdown">
+                                <p><strong>Diameter:</strong> 300m</p>
+                                <p><strong>Distance:</strong> 40,000 km</p>
+                                <p><strong>Type:</strong> Apollo</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
                 </tbody>
             </table>
+        </section>
+
+        <section class="retro-display">
+            <div class="earth-display">
+                <div class="earth-gif-container">
+                    <img src="../static/earth.gif" alt="Spinning Earth" class="earth-gif">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <a href="https://neo.ssa.esa.int/risk-list" target="_blank" class="courtesy-link">European Space Agency</a>
+        <div class="footer-logo">
+            
+            <img src="../static/esa_logo_white.svg" alt="ESA Logo">
         </div>
-        <div id="neo-details">
-            <!-- NEO details will be displayed here when a row is clicked -->
-        </div>
-        <div id="neo-orbit">
-            <!-- Small Earth and NEO orbit display -->
-            <canvas id="orbit-canvas"></canvas>
-        </div>
-    </main>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,234 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    background-image: url('../static/6503203.jpg'); /* set the background image */
+    background-size: cover; /* set the background size to cover the entire page */
+    background-position: center; /* set the background position to center */
+  }
+
+  h2 {
+    color: #FFFFFF; /* white color */
+    font-family: 'Cascadia Code', sans-serif; 
+    font-size: larger;/* Cascadia Code font */
+  }
+  
+.galaxy {
+    height: 100%;
+    background: url('../static/6503203.jpg') repeat !important;
+    opacity: 1;
+    filter: blur(5px) brightness(0.5) contrast(0.8);
+    z-index: -1;
+    position: fixed;
+     /* adjust the values to your liking */
+  }
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100%); }
+}
+
+@keyframes drift {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+/* Content Styling */
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+#astro-guard {
+    color: #FFFFFF;
+    font-size: 3rem; /* Slightly smaller title font */
+    text-transform: uppercase;
+    font-family: 'Press Start K', sans-serif; /* Replace with your custom title font */
+    margin-top: 50px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s, transform 1s;
+}
+
+#team-name {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #FFFFFF; /* White color for the subtitle */
+    margin-top: 10px;
+}
+
+#description-paragraph {
+    font-size: 1.2rem; /* Smaller font size for paragraphs */
+    font-family: 'Cascadia Code', sans-serif; /* Replace with your custom paragraph font */
+    color: #007423; /* White color for paragraphs */
+    margin: 30px auto; /* Margin on the sides for paragraphs */
+    max-width: 80%;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s, transform 1s;
+}
+
+/* Table Section */
+.table-section {
+    margin-top: 100px; /* Reduced margin between sections */
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s, transform 1s;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    opacity: 0.75;
+    background-color: rgba(0, 31, 0, 0.7); /* Semi-transparent background for the table body */
+}
+
+th, td {
+    padding: 15px; /* Increased padding for better spacing */
+    text-align: center;
+    color: #FFFFFF; /* White text color for table */
+}
+
+th {
+    background-color: rgba(0, 255, 0, 0.2); /* Transparent tile for headings */
+    border: 2px solid rgba(0, 255, 0, 0.5); /* Semi-transparent border for headings */
+}
+
+td {
+    border: 2px solid rgba(0, 255, 0, 0.7); /* Semi-transparent border for table data */
+}
+
+/* Dropdown Button */
+.details-button {
+    background-color: #00FF00;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: 'Press Start K', sans-serif; /* Same font as the title */
+}
+
+.details-button:hover {
+    background-color: #00CC00;
+}
+
+/* Dropdown Content */
+.details-dropdown {
+    display: none;
+    opacity: 0.75;
+    background-color: rgba(0, 31, 0, 0.9);
+    border: 1px solid rgba(0, 255, 0, 0.5);
+    padding: 10px;
+    position: Center;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    z-index: 10;
+    text-align: left;
+}
+
+.details-dropdown p {
+    margin: 5px 0;
+}
+
+.details-button:hover + .details-dropdown {
+    display: block;
+}
+
+/* Retro Display */
+.retro-display {
+    margin-top: 50px;
+    padding: 20px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s, transform 1s;
+}
+
+.earth-display {
+    width: 800px; /* Increased size of the SVG container */
+    height: 600px; /* Increased size of the SVG container */
+    margin: 0 auto;
+    position: relative;
+    background-color: #000; /* Ensure background color is visible */
+}
+
+.earth-display::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 119%;
+    background: url('../static/Screenshot\ 2024-08-10\ 164213.png') no-repeat center center; /* Path to your WEBP file */
+    background-size: contain;
+    z-index: 0;
+     /* Ensure the WEBP is above the GIF */
+}
+
+.earth-gif-container {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Full width of the .earth-display container */
+    height: 100%; /* Full height of the .earth-display container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensure the GIF is behind the WEBP */
+}
+
+.earth-gif {
+    width: 200px; /* Increased size of the GIF */
+    height: 200px; /* Increased size of the GIF */
+}
+
+/* Ensure the WEBP background is on top of the GIF */
+.earth-display::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 119%;
+    background: url('../static/Screenshot\ 2024-08-10\ 164213.png') no-repeat center center; /* Path to your WEBP file */
+    background-size: contain;
+    z-index: 0;
+     /* Ensure the WEBP is above the GIF */
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(0, 31, 0, 0.7); /* Matching theme of the website */
+    color: #FFFFFF; /* White text color for the footer */
+    text-align: center;
+    padding: 10px 20px; /* Padding on sides */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.courtesy-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Cascadia Code', sans-serif;
+    margin-left: 20px; /* Left margin for alignment */
+}
+
+.courtesy-link:hover {
+    text-decoration: underline;
+}
+
+.footer-logo img {
+    max-width: 100px; /* set the maximum width */
+    height: auto; /* maintain the aspect ratio */
+    padding-right: 30px; /* add padding to the right */
+  }

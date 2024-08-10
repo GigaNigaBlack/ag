@@ -1,3 +1,5 @@
+#THIS IS FOR BACKEND AND ITS USING FLASK TO CONNECT THE DATABSE TO THE FRONTEND
+
 from flask import Flask, render_template, jsonify
 import sqlite3
 
