@@ -1,0 +1,65 @@
+body {
+    background-color: #000000; /* Black background for retro theme */
+    color: #00FF00; /* Green text color for 16-bit style */
+    font-family: 'Cascadia Code', monospace; /* Retro font */
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #00FF00;
+    padding-bottom: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#neo-list {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #00FF00; /* Green border for retro look */
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #001f00; /* Dark green background for table headers */
+    text-transform: uppercase;
+}
+
+tbody tr:hover {
+    background-color: #004000; /* Slightly lighter green on hover */
+    cursor: pointer;
+}
+
+#neo-details {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#orbit-canvas {
+    width: 400px;
+    height: 400px;
+    background-color: #000000;
+    border: 2px solid #00FF00;
+    margin-top: 20px;
+}
