@@ -1,0 +1,29 @@
+body {
+    background-color: #000;
+    color: #00FF00;
+    font-family: 'Cascadia Code', monospace;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #00FF00;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+#neo-details, #neo-orbit {
+    margin-top: 20px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Top 50 Risky Near Earth Objects</h1>
+    </header>
+    <main>
+        <div id="neo-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Size (m)</th>
+                        <th>Miss Distance (km)</th>
+                    </tr>
+                </thead>
+                <tbody id="neo-table-body">
+                    <!-- Data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+        <div id="neo-details">
+            <!-- NEO details will be displayed here when a row is clicked -->
+        </div>
+        <div id="neo-orbit">
+            <!-- Small Earth and NEO orbit display -->
+            <canvas id="orbit-canvas"></canvas>
+        </div>
+    </main>
+</body>
+</html>
